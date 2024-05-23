@@ -1,0 +1,11 @@
+projectsPath=pi_workspace
+
+[pi1]
+address=pi1.iot.hs-nordhausen.de
+project=Project1
+args=ID:5,Test:Test
+
+[pi2]
+address=pi2.iot.hs-nordhausen.de
+project=HelloWorld
+args=message:Hello World

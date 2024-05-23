@@ -1,0 +1,20 @@
+<RCC>
+  <qresource>
+    <file>icons/GlyphDown.png</file>
+    <file>icons/ApplicationGroup.png</file>
+    <file>icons/InputParameter.png</file>
+    <file>icons/ApplicationRunning.png</file>
+    <file>icons/Parameter.png</file>
+    <file>icons/Application.png</file>
+    <file>icons/Builder.png</file>
+    <file>icons/CollapseAll.png</file>
+    <file>icons/MakefileProject.png</file>
+    <file>icons/Refresh.png</file>
+    <file>icons/Run.png</file>
+    <file>icons/Save.png</file>
+    <file>icons/StatusInvalid.png</file>
+    <file>icons/StatusNotStarted.png</file>
+    <file>icons/StatusOK.png</file>
+    <file>icons/Stop.png</file>
+  </qresource>
+</RCC>

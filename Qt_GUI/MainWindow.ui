@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Raspberry Pi  -  Project-Administration</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTreeWidgetPis" name="tw_pis">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>391</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::InternalMove</enum>
+    </property>
+    <property name="headerHidden">
+     <bool>true</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="lbl_error">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>941</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Error:</string>
+    </property>
+   </widget>
+   <widget class="QTreeView" name="tv_files">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>40</y>
+      <width>281</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <attribute name="headerVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>35</number>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="btn_save">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save Project</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/Save.png</normaloff>:/icons/Save.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_compile">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>140</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Build Project</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/Builder.png</normaloff>:/icons/Builder.png</iconset>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lw_infoOutput">
+    <property name="geometry">
+     <rect>
+      <x>679</x>
+      <y>420</y>
+      <width>291</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_start">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>200</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Application</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/Run.png</normaloff>:/icons/Run.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_stop">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>260</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop Application</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/Stop.png</normaloff>:/icons/Stop.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_refresh">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>330</y>
+      <width>75</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/Refresh.png</normaloff>:/icons/Refresh.png</iconset>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chbx_selectAll">
+    <property name="geometry">
+     <rect>
+      <x>74</x>
+      <y>20</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select all Clients</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabW_appOutput">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>420</y>
+      <width>621</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	background-color: rgb(12, 12, 12); 
+	color: rgb(204, 204, 204);
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pi1">
+     <attribute name="title">
+      <string>pi1</string>
+     </attribute>
+     <widget class="QTextEdit" name="te_appOutput_1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>615</width>
+        <height>327</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pi2">
+     <attribute name="title">
+      <string>pi2</string>
+     </attribute>
+     <widget class="QTextEdit" name="te_appOutput_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>621</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_collapse">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Collapse Folders</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Qt_GUI.qrc">
+      <normaloff>:/icons/CollapseAll.png</normaloff>:/icons/CollapseAll.png</iconset>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QTreeWidgetPis</class>
+   <extends>QTreeWidget</extends>
+   <header>qtreewidgetpis.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Qt_GUI.qrc"/>
+ </resources>
+ <connections/>
+</ui>

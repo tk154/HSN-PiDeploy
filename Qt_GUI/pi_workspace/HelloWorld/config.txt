@@ -1,0 +1,5 @@
+# Arguments of the project
+# Meta parameters can be specified inside two percentage signs
+# They are replaced with the value of the argument name from the Raspberry Pi
+# Or removed if there is no such argument
+argv=%message% again
