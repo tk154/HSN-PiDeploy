@@ -2,12 +2,15 @@
 #include "RaspberryPi.h"
 
 // When compiling on Windows
-#ifdef WIN32
+#if defined(_WIN32)
     #define SSH_BIN "SSH.exe"
-// When compiling on Linux
-#elif __linux__
+// When compiling on Linux or macOS
+#elif defined(__linux__) || defined(__APPLE__)
     #define SSH_BIN "./SSH"
+#else
+    #error "Neither _WIN32, __linux__, or __APPLE__ ?"
 #endif
+
 
 SSH::SSH(RaspberryPi* pi) {
     // Save the pointer to the RaspberryPi object
